@@ -1,32 +1,24 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Layout from "../../shared/Layout";
 import { accordion_data } from "./data";
 import SlideingSection from "./sections/SlideingSection";
 import Sponsore from "./sections/Sponsore";
 import WorkBlogs from "./sections/WorkBlogs";
+import WhoAreWe from "./sections/WhoAreWe";
 
 export default function Home() {
-  const [active, setActive] = useState([true]);
+  const [active, setActive] = useState([true, true, true, true]);
 
   return (
-    <Layout className="text-white">
-      <div className="h-dvh overflow-x-hidden relative">
+    <Layout>
+      <div className="h-dvh overflow-x-hidden relative border-b border-b-gray-700">
         {accordion_data.map((content, i) => (
-          <SlideingSection
-            {...{ active, setActive, content, i }}
-            key={i}
-          />
+          <SlideingSection {...{ active, setActive, content, i }} key={i} />
         ))}
       </div>
-      <WorkBlogs/>
-      <Sponsore/>
+      <WorkBlogs />
+      <Sponsore />
+      <WhoAreWe />
     </Layout>
   );
 }
-
-// div width 60%
-// inactive slides div:
-// -right-10%,20%,30%
-// default active div:left-0
-// every active dive :
-// left-10%,20%,30%

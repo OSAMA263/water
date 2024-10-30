@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        abyss: "#031217",
-        "deep-ocean": "#0b191e",
+        Abyss: "#031217",
+        Ocean: "#5d828b",
+        Gray: "#8d9a9d",
       },
     },
   },

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Work() {
+export default function Blog() {
   return (
     <div>page</div>
   )

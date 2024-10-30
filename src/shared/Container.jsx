@@ -1,8 +1,8 @@
 import tw from "tailwind-styled-components"
 
-export default function Container({children,cls}) {
+export default function Container({children,className}) {
   return (
-    <Wrapepr className={cls??""}>{children}</Wrapepr>
+    <Wrapepr className={className??""}>{children}</Wrapepr>
   )
 }
 
