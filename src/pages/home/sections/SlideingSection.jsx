@@ -91,9 +91,8 @@ const ImagesSwiper = () => {
 
 const Slider = tw.div`
 ${({ $active, $i }) =>
-  $active === $i ? "text-Ocean" : "text-Gray cursor-pointer"}
+  $active === $i ? "text-Ocean" : "text-Gray cursor-pointer hover:text-Sky"}
 w-[85%]
-hover:text-Ocean
 border-l
 border-l-gray-700
 bg-Abyss
@@ -107,4 +106,5 @@ gap-10
 pl-2
 transition-all
 duration-1000
+ease-[cubic-bezier(0.66,0.03,0,0.99)]
 `;

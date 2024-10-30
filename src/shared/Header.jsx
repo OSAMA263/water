@@ -3,7 +3,7 @@ import tw from "tailwind-styled-components";
 
 export default function Header() {
   return (
-    <header className="bg-Abyss p-4 z-50 sticky top-0 border-b">
+    <header className="bg-Abyss p-8 z-50 fixed w-full top-0 border-b">
       <Navbar>
         {/* logo */}
         <div className="flex gap-2 items-center">

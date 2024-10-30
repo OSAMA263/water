@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         Abyss: "#031217",
-        Ocean: "#5d828b",
+        Ocean: "#19292f",
         Gray: "#8d9a9d",
+        Sky:"#5d828b"
       },
     },
   },
