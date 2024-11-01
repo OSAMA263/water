@@ -1,11 +1,14 @@
 import { Route, Routes, useLocation } from "react-router";
 import Home from "./pages/home/page";
 import Header from "./shared/Header";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 
 function App() {
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
   return (
     <>
       <Header />
@@ -13,6 +16,8 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/work" element={<Work />}></Route>
+          <Route path="/Blog" element={<Blog />}></Route>
         </Routes>
       </Suspense>
     </>

@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <Layout
-    className="!py-0"
+      className="!py-0"
       title="base"
       description="home Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sit repellat itaque corporis impedit odit rerum, animi inventore rem provident iure ratione earum, debitis ex hic perspiciatis, ut doloremque in!"
     >

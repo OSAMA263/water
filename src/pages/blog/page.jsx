@@ -5,3 +5,5 @@ export default function Blog() {
     <div>page</div>
   )
 }
+// blog_cards
+// BlogCard

@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import Container from "../../../shared/Container";
 import { blog_cards } from "../data";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function WorkBlogs() {
   return (
@@ -14,20 +16,35 @@ export default function WorkBlogs() {
       </section>
       <section className="grid grid-cols-3 gap-x-10 gap-y-20">
         {blog_cards.map((blog, i) => (
-          <BlogCard key={i} {...blog} />
+          <BlogCard key={i} {...blog} img={blog.home_img} />
         ))}
       </section>
     </Container>
   );
 }
 
-const BlogCard = ({ img, title, text, url }) => {
+export const BlogCard = ({ title, text, img ,animateScroll}) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 0"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
   return (
-    <div className="font-semibold space-y-4 [&_img]:hover:scale-110 cursor-pointer">
-      <div className="rounded-lg overflow-hidden">
-        <img src={img} alt={title} className="w-full h-full" />
+    <div
+      ref={ref}
+      className="font-semibold space-y-4 [&_img]:hover:scale-110 cursor-pointer"
+    >
+      <div className="rounded-xl overflow-hidden">
+        <motion.img
+          style={{ y:animateScroll?y:null }}
+          src={img}
+          alt={title}
+          className="w-full h-full rounded-xl"
+        />
       </div>
-      <h1 className="text-white text-[1.5rem]">{title}</h1>
+      <h1 className="text-white text-2xl">{title}</h1>
       <p className="text-Gray">{text}</p>
     </div>
   );

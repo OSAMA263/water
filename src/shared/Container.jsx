@@ -7,6 +7,6 @@ export default function Container({children,className}) {
 }
 
 const Wrapepr=tw.div`
-w-[90%]
+w-[85%]
 mx-auto
 `
