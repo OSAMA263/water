@@ -13,10 +13,14 @@ body {
 a,
 img,
 svg,
-button {
+button,
+input,
+textarea {
   transition: all 0.3s ease-in-out;
 }
-
+textarea {
+  resize: none;
+}
 .main-btn {
   font-weight: 600;
   color: #aec0c5;
@@ -48,5 +52,24 @@ button {
     }
   }
 }
-// home
-//
+.input-styles {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #3d4c51;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: transparent;
+  color: white;
+  padding-left: 0;
+  padding-block: 10px;
+  width: 100%;
+  outline: none;
+  &::placeholder{
+    color: gray;
+  }
+  &:hover,
+  &:focus {
+    background: #0c1f25;
+    padding-left: 20px;
+    border: 1px solid #3d4c51;
+  }
+}

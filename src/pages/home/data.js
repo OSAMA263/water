@@ -41,7 +41,6 @@ const blog_cards = [
     work_img: "home/work1.jpg",
     title: "space suit",
     text: "Welcome to the epitome of haute couture sophistication - Prada, an iconic project meticulously curated by our agency",
-    url: "",
   },
 
   {
@@ -49,35 +48,30 @@ const blog_cards = [
     work_img: "/home/work2.jpg",
     title: "fluid",
     text: "Embark on a symphonic journey with Music Pro 2, a visionary project crafted by our agency with a harmonious fusion of creativity and technical prowess",
-    url: "",
   },
   {
     home_img: "/home/blog3.jpg",
     work_img: "/home/work3.jpg",
     title: "music pro 2",
     text: "Louis Vuitton, an embodiment of luxury and timeless elegance, epitomizes the pinnacle of sophistication in our latest project",
-    url: "",
   },
   {
     home_img: "/home/blog4.jpg",
     work_img: "/home/work4.jpg",
     title: "chroma",
     text: "Introducing Cyber Testa, a groundbreaking project meticulously crafted by our agency, boasting cutting-edge branding, sleek design, and visionary art direction",
-    url: "",
   },
   {
     home_img: "/home/blog5.jpg",
     work_img: "/home/work5.jpg",
     title: "granturismo",
     text: "Introducing Cyber Testa, a groundbreaking project meticulously crafted by our agency, boasting cutting-edge branding, sleek design, and visionary art direction",
-    url: "",
   },
   {
     home_img: "/home/blog6.jpg",
     work_img: "/home/work6.jpg",
     title: "social pro",
     text: "Introducing Cyber Testa, a groundbreaking project meticulously crafted by our agency, boasting cutting-edge branding, sleek design, and visionary art direction",
-    url: "",
   },
 ];
 

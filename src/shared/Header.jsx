@@ -18,7 +18,10 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <NavLink className="main-btn inline-block !rounded-md !py-2 border border-Sky">
+            <NavLink
+              to="/contact"
+              className="main-btn inline-block !rounded-md !py-2 border border-Sky"
+            >
               Contact us
             </NavLink>
           </li>
