@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { MdArrowOutward, MdArrowForward, MdArrowBack } from "react-icons/md";
 import { swiper_imgs_navigatoer } from "../data";
+import SlideElement from "../../../components/SlideElement";
 
 export default function SlideingSection(props) {
   const { active, i, setActive, content } = props;
@@ -35,22 +36,26 @@ export default function SlideingSection(props) {
       onClick={() => handleActiveSlide(i)}
     >
       {/* left large title */}
-      <div className="flex items-baseline font-semibold">
-        <div className="text-[20vw] uppercase">{title.split("")[0]}</div>
-        <div className="-ml-[2vw] text-[2vw]">{title.split("").slice(1)}</div>
-      </div>
+      <SlideElement>
+        <div className="flex items-baseline font-semibold">
+          <div className="text-[20vw] uppercase">{title.split("")[0]}</div>
+          <div className="-ml-[2vw] text-[2vw]">{title.split("").slice(1)}</div>
+        </div>
+      </SlideElement>
       {/* right sliders content */}
-      <div className="space-y-8 text-pretty">
-        <h1 className="text-[4.25rem] text-white leading-none">
-          {header_text}
-        </h1>
-        <p className="text-Gray text-[1.25rem]">{text}</p>
-        <Link className="font-semibold hover:text-Gray items-center flex [&>svg]:hover:ml-2 text-white">
-          Discover Our Work <MdArrowOutward />
-        </Link>
-        {/* images swiper */}
-        <ImagesSwiper />
-      </div>
+      <SlideElement>
+        <div className="space-y-8 text-pretty">
+          <h1 className="text-[4.25rem] text-white leading-none">
+            {header_text}
+          </h1>
+          <p className="text-Gray text-[1.25rem]">{text}</p>
+          <Link aria-label="blog link" className="font-semibold hover:text-Gray items-center flex [&>svg]:hover:ml-2 text-white">
+            Discover Our Work <MdArrowOutward />
+          </Link>
+          {/* images swiper */}
+          <ImagesSwiper />
+        </div>
+      </SlideElement>
     </Slider>
   );
 }
@@ -58,15 +63,15 @@ const ImagesSwiper = () => {
   const swiperProps = {
     slidesPerView: 2,
     loop: true,
-    speed:500,
-    grabCursor:true,
+    speed: 500,
+    grabCursor: true,
     navigation: { nextEl: "#next", prevEl: "#prev" },
     modules: [Navigation],
   };
 
   return (
     <>
-      <Swiper  {...swiperProps} className="!z-0 [&>.swiper-wrapper]:gap-6">
+      <Swiper {...swiperProps} className="!z-0 [&>.swiper-wrapper]:gap-6">
         {swiper_imgs_navigatoer.map(({ highlight, text, img }, i) => (
           <SwiperSlide className="space-y-4" key={i}>
             <img className="rounded-2xl" src={img} alt={i + "img"} />
@@ -78,10 +83,10 @@ const ImagesSwiper = () => {
         ))}
       </Swiper>
       <div className="flex gap-4 items-center [&>button:hover]:text-white">
-        <button id="prev">
+        <button aria-label="prev image" id="prev">
           <MdArrowBack />
         </button>
-        <button id="next">
+        <button aria-label="next image" id="next">
           <MdArrowForward />
         </button>
       </div>

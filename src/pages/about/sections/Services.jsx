@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { services_data } from "../data";
+import SlideElement from "../../../components/SlideElement";
 
 export default function Services() {
   const ref = useRef(null);
@@ -17,12 +18,15 @@ export default function Services() {
           style={{ rotate }}
           className="w-[40%]"
           src="logo.svg"
-          alt="logo"
+          loading="lazy"
+          alt="rotateing logo"
         />
       </div>
       <div ref={ref} className="space-y-20">
         {services_data.map((service, i) => (
-          <Service {...service} key={i} />
+          <SlideElement offset={.6} y={0} x={100} key={i}>
+            <Service {...service} />
+          </SlideElement>
         ))}
       </div>
     </div>

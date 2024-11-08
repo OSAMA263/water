@@ -5,7 +5,7 @@ export default function ZoomImg({ img, scale = 1, init_scale = 1 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 .8", "1 .7"],
+    offset: ["0 .8", "1 .4"],
   });
 
   const scaleStyle = useTransform(scrollYProgress, [0, 1], [init_scale, scale]);

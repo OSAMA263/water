@@ -1,5 +1,6 @@
 import Layout from "../../shared/Layout";
 import Container from "../../shared/Container";
+import SlideElement from "../../components/SlideElement";
 import tw from "tailwind-styled-components";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -8,16 +9,21 @@ export default function Contact() {
   return (
     <Layout
       title="Contact with us"
-      description="contact  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in corrupti accusantium necessitatibus iste animi et mollitia veritatis, quisquam quia minus recusandae delectus pariatur cum ipsam maxime, facere numquam voluptatum."
+      description="cotact Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sit repellat itaque corporis impedit odit rerum, animi inventore rem provident iure ratione"
+      href="https://osama263.github.io/water/#/contact"
     >
       <Container>
         {/* spinign logo */}
-        <div className="py-10 border-b flex items-center justify-center gap-8 border-Ocean">
-          <img src="logo.svg" className="w-[5%]" alt="spining logo" />
-          <h1 className="text-[11rem] text-white font-semibold">Contact</h1>
-        </div>
+        <SlideElement>
+          <div className="py-10 border-b flex items-center justify-center gap-8 border-Ocean">
+            <img src="logo.svg" className="w-[5%]" alt="spining logo" />
+            <h1 className="text-[11rem] text-white font-semibold">Contact</h1>
+          </div>
+        </SlideElement>
         {/* form */}
-        <Form />
+        <SlideElement offset={.4}>
+          <Form />
+        </SlideElement>
       </Container>
     </Layout>
   );
@@ -76,7 +82,7 @@ const Form = () => {
           rows={4}
         ></textarea>
       </div>
-      <button type="submit" className="main-btn !bg-Ocean !rounded-md !py-4">
+      <button aria-label="submit message" type="submit" className="main-btn !bg-Ocean !rounded-md !py-4">
         Submit Message
       </button>
     </FormWrapper>

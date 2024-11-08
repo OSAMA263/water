@@ -8,12 +8,13 @@ export default function BlogCard(props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "1 .5"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-5%", "1%"]);
   return (
     <Link
+    aria-label="blog link"
       ref={ref}
       to={url}
       className="font-semibold inline-block space-y-4 [&_img]:hover:scale-110 cursor-pointer"
