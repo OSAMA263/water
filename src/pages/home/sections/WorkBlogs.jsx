@@ -25,7 +25,7 @@ export default function WorkBlogs() {
         </HeaderTitle>
       </section>
       {/* blog cards */}
-      <section className="grid grid-cols-3 gap-x-10 gap-y-20">
+      <section className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-10 gap-y-20">
         {blog_cards.map((blog, i) => (
           <SlideElement offset={0.4} key={i}>
             <BlogCard url={`/blog/${i + 1}`} {...blog} img={blog.home_img} />
@@ -37,10 +37,12 @@ export default function WorkBlogs() {
 }
 
 const HeaderTitle = tw.div`
-flex relative
+flex
+relative
 leading-none
 flex-col
 items-center
-text-6xl
+md:text-6xl
+text-4xl
 text-Gray
 `;

@@ -14,7 +14,7 @@ export default function Work() {
     >
       <Container className="space-y-20">
         <SectionHeader title="Where Vision Meets Excellence" />
-        <div className="grid grid-cols-2 gap-32 w-[80%] mx-auto">
+        <div className="grid md:grid-cols-2 xl:gap-32 gap-10 xl:w-[80%] mx-auto">
           {blog_cards.map((blog, i) => (
             <SlideElement offset={.3} className={i % 2 === 1 ? "mt-32" : ""} key={i}>
               <BlogCard

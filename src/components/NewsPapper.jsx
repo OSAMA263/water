@@ -8,7 +8,7 @@ export default function NewsPapper() {
     <Container className="py-28 bg-Abyss relative z-10 text-Gray">
       <SlideElement offset={.4}>
         <h1 className="text-4xl mb-4">NewsPapper</h1>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {news_papper.map((blog, i) => (
             <Blog key={blog.title} {...blog} url={`/blog/${i + 1}`} />
           ))}
@@ -22,7 +22,7 @@ const Blog = ({ title, img, date, type, url }) => {
   return (
     <Link aria-label="blog" to={url} className="space-y-4 font-semibold">
       <div className="overflow-hidden rounded-2xl ">
-        <img loading="lazy" src={img} alt={title} className="hover:scale-110" />
+        <img loading="lazy" src={img} alt={title} className="w-full hover:scale-110" />
       </div>
       <div className="flex items-center gap-x-4 uppercase">
         <h1>{date}</h1>

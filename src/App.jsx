@@ -12,6 +12,7 @@ function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
+  
   return (
     <>
       <Header />
@@ -19,6 +20,7 @@ function App() {
         <Suspense fallback={<Loader />}>
           <Routes key={location.pathname} location={location}>
             <Route path="/" element={<Home />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/work" element={<Work />}></Route>
             <Route path="/Blog" element={<Blog />}></Route>
@@ -39,3 +41,4 @@ const Work = lazy(() => import("./pages/work/page"));
 const Blog = lazy(() => import("./pages/blog/page"));
 const SingleBlog = lazy(() => import("./pages/blog//single blog/page"));
 const Contact = lazy(() => import("./pages/contact/page"));
+const NotFound = lazy(() => import("./shared/NotFound"));

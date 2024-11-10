@@ -17,7 +17,7 @@ export default function About() {
       description="about Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sit repellat itaque corporis impedit odit rerum, animi inventore rem provident iure ratione"
       href="https://osama263.github.io/water/#/about"
     >
-      <Container className="space-y-28">
+      <Container className="lg:space-y-28 space-y-10">
         {/* header */}
         <SectionHeader title="Commitment to Quality and Creativity" />
         {/* zoom out image */}
@@ -25,7 +25,7 @@ export default function About() {
         {/* sticky section */}
       </Container>
       {/* sticky section */}
-      <Container className="py-32 font-semibold sticky top-0 grid grid-cols-2 text-balance">
+      <Container className="py-32 font-semibold sticky top-0 grid xl:grid-cols-2 gap-10 text-balance">
         <SlideElement>
           <h1 className="font-bold text-5xl h-fit leading-none">
             We don't make deals, we make commitments.
@@ -54,13 +54,13 @@ export default function About() {
       {/* ---------------after the sticky div------------------ */}
       <div className="relative bg-Abyss z-10">
         <div className="bg-Ocean relative py-32">
-          <Container className="grid grid-cols-2 grid-rows-2">
+          <Container className="grid gap-y-10 xl:grid-cols-2 xl:grid-rows-2">
             <SlideElement className="self-center justify-self-center">
-              <h1 className="leading-none text-start text-5xl">
+              <h1 className="leading-none text-start sm:text-5xl text-4xl">
                 Our approach combines innovative thinking with effective
                 strategies to achieve outstanding outcomes.
               </h1>
-              <div></div>
+              <div className="max-xl:hidden"></div>
               {/*  */}
               <button aria-label="contact" className="main-btn w-full">Get In Touch</button>
             </SlideElement>
@@ -85,7 +85,7 @@ export default function About() {
         {/* rotate img */}
         <Services />
         <div className="text-center py-28 space-y-20">
-          <div className="w-1/2 mx-auto space-y-8">
+          <div className="lg:w-1/2 mx-auto space-y-8">
             <SlideElement>
               <h1 className="text-6xl"> Unleash Your Brand’s Potential</h1>
               <p>

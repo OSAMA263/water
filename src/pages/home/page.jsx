@@ -16,7 +16,7 @@ export default function Home() {
       description="home Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sit repellat itaque corporis impedit odit rerum, animi inventore rem provident iure ratione earum"
       href="https://osama263.github.io/water/"
     >
-      <div className="h-dvh overflow-x-hidden relative border-b border-b-gray-700">
+      <div className="h-dvh overflow-x-hidden relative">
         {accordion_data.map((content, i) => (
           <SlideingSection {...{ active, setActive, content, i }} key={i} />
         ))}

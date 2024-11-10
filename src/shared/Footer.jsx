@@ -20,11 +20,11 @@ export default function Footer() {
         transition={{ duration: 0.9, delay: 0.2 }}
         className="bg-Ocean h-[1px]"
       ></motion.div>
-      <Container className={"py-20 space-y-10"}>
+      <Container className={"py-16 space-y-10"}>
         <SlideElement>
-          <div className="flex justify-between items-center">
+          <div className="flex max-md:flex-col gap-y-10 justify-between items-center">
             {/* getstarted */}
-            <div className="space-y-4 w-1/2 text-balance">
+            <div className="space-y-4 md:w-1/2 text-balance">
               <Link
                 aria-label="home"
                 to="/"
@@ -59,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
         </SlideElement>
-        {/* social links */}{" "}
+        {/* social links */}
         <SlideElement>
           <div className="flex items-center justify-between">
             <h1 className="text-Gray">

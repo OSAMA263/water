@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { services_data } from "../data";
 import SlideElement from "../../../components/SlideElement";
+import Container from "../../../shared/Container";
 
 export default function Services() {
   const ref = useRef(null);
@@ -12,11 +13,12 @@ export default function Services() {
 
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
   return (
-    <div className="grid grid-cols-2 w-[60%] mx-auto py-40">
+    <Container>
+    <div className="lg:grid grid-cols-2 2xl:w-[80%] mx-auto py-40">
       <div className="sticky top-28 h-fit">
         <motion.img
           style={{ rotate }}
-          className="w-[40%]"
+          className="w-[40%] max-lg:hidden"
           src="logo.svg"
           loading="lazy"
           alt="rotateing logo"
@@ -29,7 +31,7 @@ export default function Services() {
           </SlideElement>
         ))}
       </div>
-    </div>
+    </div></Container>
   );
 }
 

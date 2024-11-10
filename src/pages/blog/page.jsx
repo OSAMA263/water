@@ -14,7 +14,7 @@ export default function Blog() {
     >
       <Container className="space-y-20">
         <SectionHeader title="Dive into Creative and Innovative Ideas"></SectionHeader>
-        <div className="grid grid-cols-3 gap-y-20 gap-x-10">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-20 gap-x-10">
           {blogs.map((blog, i) => (
             <SlideElement offset={.5} key={i}>
               <BlogCard {...blog} url={`/blog/${i + 1}`} />

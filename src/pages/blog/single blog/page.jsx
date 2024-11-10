@@ -67,7 +67,7 @@ export default function SingleBlog() {
 const BlogContent = tw.div`
 mx-auto
 space-y-6
-w-[60%]
+xl:w-[60%]
 font-semibold
 text-Gray
 [&_h1]:text-3xl

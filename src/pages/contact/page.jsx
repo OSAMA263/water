@@ -17,7 +17,7 @@ export default function Contact() {
         <SlideElement>
           <div className="py-10 border-b flex items-center justify-center gap-8 border-Ocean">
             <img src="logo.svg" className="w-[5%]" alt="spining logo" />
-            <h1 className="text-[11rem] text-white font-semibold">Contact</h1>
+            <h1 className="sm:text-9xl text-5xl text-white font-semibold">Contact</h1>
           </div>
         </SlideElement>
         {/* form */}
@@ -91,7 +91,7 @@ const Form = () => {
 
 const FormWrapper = tw.form`
 py-28
-w-1/2
+lg:w-1/2
 mx-auto
 [&>div]:space-y-6
 [&>div]:text-Gray
