@@ -12,6 +12,7 @@ export default function Header() {
 
   useEffect(() => {
     onClose();
+    window.scrollTo({top:0,behavior:"smooth"})
   }, [pathname]);
   return (
     <header className="bg-Abyss px-8 py-4 z-[696969] fixed w-full top-0 border-b border-Ocean">
