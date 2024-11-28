@@ -4,7 +4,7 @@ import Layout from "../../../shared/Layout";
 import Container from "../../../shared/Container";
 import SectionHeader from "../../../components/SectionHeader";
 import { blogs } from "../data";
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import tw from "tailwind-styled-components";
 import { blog_content } from "./data";
@@ -29,14 +29,18 @@ export default function SingleBlog() {
       href={`https://osama263.github.io/water/#/blog${id}`}
     >
       <Container>
-        <SectionHeader className="py-10" title={blogs[id - 1].title} text={blogs[id - 1].text} />
+        <SectionHeader
+          className="py-10"
+          title={blogs[id - 1].title}
+          text={blogs[id - 1].text}
+        />
       </Container>
       <div ref={ref} className="overflow-hidden relative">
         <SlidingCurtains
           initial={{ height: "100%" }}
           whileInView={{ height: "0%" }}
           transition={{ duration: 0.9, delay: 0.8 }}
-          viewport={{once:true}}
+          viewport={{ once: true }}
         />
         <motion.img
           style={{ scale }}
@@ -47,16 +51,14 @@ export default function SingleBlog() {
       </div>
       <Container>
         <BlogContent>
-          <SlideElement className="space-y-6">
-            {blog_content.map(({ title, text }, i) => (
-              <Fragment key={i}>
+          {blog_content.map(({ title, text }, i) => (
+              <SlideElement  key={i} offset={0.5} className="space-y-6">
                 <h1>{title}</h1>
                 {text.map((par, j) => (
                   <p key={j}>{par}</p>
                 ))}
-              </Fragment>
-            ))}
-          </SlideElement>
+              </SlideElement>
+          ))}
         </BlogContent>
       </Container>
       <NewsPapper />

@@ -14,6 +14,7 @@ export default function Header() {
     onClose();
     window.scrollTo({top:0,behavior:"smooth"})
   }, [pathname]);
+
   return (
     <header className="bg-Abyss px-8 py-4 z-[696969] fixed w-full top-0 border-b border-Ocean">
       <NavWrapperLG>
@@ -97,8 +98,7 @@ px-[10%]
 bg-Abyss
 absolute
 w-full
-top-0
-h-[50vh]
+top-16
 z-[50]
 flex
 items-center
